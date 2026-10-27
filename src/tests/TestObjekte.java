@@ -1,3 +1,6 @@
+/**
+ * @author IhabAlbazweer
+ */
 package tests;
 
 import objekte.Fach;
@@ -5,7 +8,7 @@ import objekte.Spezialisierung;
 
 public class TestObjekte {
 
-		// Einfache Testdaten anlegen und Beziehungen zwischen Objekten ausprobieren.
+	// Einfache Testdaten anlegen und Beziehungen zwischen Objekten ausprobieren.
 	public static void main(String[] args) {
 
 //Fach 1
@@ -39,7 +42,8 @@ public class TestObjekte {
 // Fach 1 Spezial. 2	
 		// Zweite Spezialisierung direkt ueber den Konstruktor erzeugen.
 		Spezialisierung spezi2 = new Spezialisierung(2, "SI", fach1);
-		// Hinweis: spezi2 wird hier noch nicht mit fach1.addSpezialisierung() zur Liste hinzugefuegt.
+		// Hinweis: spezi2 wird hier noch nicht mit fach1.addSpezialisierung() zur Liste
+		// hinzugefuegt.
 		IO.println(spezi2);
 
 	}

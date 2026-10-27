@@ -1,3 +1,6 @@
+/**
+ * @author IhabAlbazweer
+ */
 package objekte;
 
 public class Modul {
@@ -50,7 +53,8 @@ public class Modul {
 	// Fuer die Anzeige auch die Bezeichnung der Spezialisierung verwenden.
 	@Override
 	public String toString() {
-		// Achtung: Ohne gesetzte Spezialisierung fuehrt der Aufruf zu einer NullPointerException.
+		// Achtung: Ohne gesetzte Spezialisierung fuehrt der Aufruf zu einer
+		// NullPointerException.
 		return bezeichnung + " id " + id + " spezialisierung " + spezialisierung.getBezeichnung();
 	}
 

@@ -1,5 +1,5 @@
 /**
- * @author ValentinaTikko
+ * @author IhabAlbazweer
  */
 package objekte;
 

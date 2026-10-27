@@ -1,3 +1,6 @@
+/**
+ * @author IhabAlbazweer
+ */
 package objekte;
 
 import java.util.ArrayList;
@@ -7,7 +10,7 @@ public class Gruppe {
 	// Gruppe wird ueber id identifiziert und besitzt einen Namen.
 	private int id;
 	private String name;
-	
+
 	// 1:n-Beziehung: Eine Gruppe kann mehrere Azubis enthalten.
 	private ArrayList<Azubi> teilnehmer;
 
@@ -29,7 +32,7 @@ public class Gruppe {
 		this.id = id;
 		this.name = name;
 	}
-	
+
 	/**
 	 * 
 	 * @param tn

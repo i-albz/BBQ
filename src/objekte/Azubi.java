@@ -1,3 +1,6 @@
+/**
+ * @author IhabAlbazweer
+ */
 package objekte;
 
 public class Azubi {
@@ -71,7 +74,8 @@ public class Azubi {
 	// Textdarstellung mit Daten aus den verknuepften Objekten.
 	@Override
 	public String toString() {
-		// Hinweis: Fehlen Gruppe oder Spezialisierung, kann getId()/getBezeichnung() fehlschlagen.
+		// Hinweis: Fehlen Gruppe oder Spezialisierung, kann getId()/getBezeichnung()
+		// fehlschlagen.
 		String str = name + vorname + "\n";
 		str += "Gruppe " + gruppe.getId() + "\n";
 		str += "Spezialisierung" + spezialisierung.getBezeichnung();

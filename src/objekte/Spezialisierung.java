@@ -1,3 +1,6 @@
+/**
+ * @author IhabAlbazweer
+ */
 package objekte;
 
 import java.util.ArrayList;
@@ -8,7 +11,7 @@ public class Spezialisierung {
 	private int id;
 	private String bezeichnung;
 	private Fach fach; // Eine Spezialisierung gehört zu einem Fach
-	
+
 	// 1:n-Beziehung: Einer Spezialisierung koennen mehrere Module zugeordnet sein.
 	private ArrayList<Modul> module;
 
@@ -31,7 +34,7 @@ public class Spezialisierung {
 		this.bezeichnung = bezeichnung;
 		this.fach = fach;
 	}
-	
+
 	public String addModul(Modul m) {
 
 		// Modulliste bei Bedarf erzeugen.
@@ -77,7 +80,8 @@ public class Spezialisierung {
 	// Ausgabe der Spezialisierung mit dem Namen des verknuepften Fachs.
 	@Override
 	public String toString() {
-		// Fehlt das Fach, wuerde fach.getBezeichnung() eine NullPointerException ausloesen.
+		// Fehlt das Fach, wuerde fach.getBezeichnung() eine NullPointerException
+		// ausloesen.
 		return bezeichnung + " id " + id + " fach " + fach.getBezeichnung();
 	}
 
