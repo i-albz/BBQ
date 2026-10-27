@@ -8,11 +8,10 @@ import java.util.ArrayList;
 /**
  * Entspricht der DB-Entität Fach
  */
-public class Fach extends Object {
+public class Fach extends BBQObjekt {
 	
 	public static final String EOF = "\n";
 
-	private int id;
 	private String bezeichnung;
 	// zu einem Fach gehören mehrere Spezialisierungen
 	// A lot of Spezialisierung belong to Fach
@@ -33,7 +32,7 @@ public class Fach extends Object {
 	 * @param bezeichnung Bezeichnung des Faches
 	 */
 	public Fach(int id, String bezeichnung) {
-		this.id = id;
+		super(id);
 		this.bezeichnung = bezeichnung;
 	}
 
@@ -61,13 +60,6 @@ public class Fach extends Object {
 		return null;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getBezeichnung() {
 		return bezeichnung;
@@ -79,8 +71,9 @@ public class Fach extends Object {
 
 	@Override
 	public String toString() {
-		String str = "Fach " + bezeichnung + " id " + id + EOF;
-		str += spezialisierungen.toString();
+		String str = "Fach " + bezeichnung + " id " + getId() + EOF;
+		if (spezialisierungen != null)
+			str += spezialisierungen.toString();
 		return str;
 	}
 }

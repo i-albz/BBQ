@@ -2,9 +2,8 @@ package objekte;
 
 import java.util.ArrayList;
 
-public class Spezialisierung {
+public class Spezialisierung extends BBQObjekt {
 
-	private int id;
 	private String bezeichnung;
 	private Fach fach; // Eine Spezialisierung gehört zu einem Fach
 	
@@ -22,8 +21,7 @@ public class Spezialisierung {
 	 * @param bezeichnung
 	 */
 	public Spezialisierung(int id, String bezeichnung) {
-		super();
-		this.id = id;
+		super(id);
 		this.bezeichnung = bezeichnung;
 	}
 	
@@ -66,13 +64,6 @@ public class Spezialisierung {
 	}
 	
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getBezeichnung() {
 		return bezeichnung;
@@ -92,8 +83,9 @@ public class Spezialisierung {
 
 	@Override
 	public String toString() {
-		String str = Fach.EOF + bezeichnung + " id " + id + Fach.EOF;
-		str += module.toString();
+		String str = Fach.EOF + bezeichnung + " id " + getId() + Fach.EOF;
+		if (module != null)
+			str += module.toString();
 		return str;
 	}
 

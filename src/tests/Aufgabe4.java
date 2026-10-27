@@ -24,7 +24,6 @@ public class Aufgabe4 {
 
 		Spezialisierung sp;
 		f.addSpezialisierung(sp = createSpezialisierung(1, "Erste Spezialisierung"));
-		f.addSpezialisierung(sp);
 
 		sp.addModul(createModul(1, "Modul 1.1"));
 		sp.addModul(createModul(2, "Modul 1.2"));
@@ -38,18 +37,17 @@ public class Aufgabe4 {
 		}
 
 		f.addSpezialisierung(sp = createSpezialisierung(2, "Zweite Spezialisierung"));
-		sp.addModul(createModul(1, "Modul 2.1"));
-		sp.addModul(createModul(2, "Modul 2.2"));
-		sp.addModul(createModul(3, "Modul 2.3"));
+		sp.addModul(createModul(4, "Modul 2.1"));
+		sp.addModul(createModul(5, "Modul 2.2"));
+		sp.addModul(createModul(6, "Modul 2.3"));
 
-		IO.println(f);
-
-		gr = new Gruppe(10, "Gruppe 1");
-		for (int i = 10; i < 50 + 1; i++) {
+		gr = new Gruppe(11, "Gruppe 2");
+		for (int i = 6; i <= 10; i++) {
 			gr.addTeilnehmer(az = new Azubi(i, "Name" + i, "Vorname" + i));
 			sp.addZubi(az);
 		}
 
+		System.out.println(f);
 	}
 
 

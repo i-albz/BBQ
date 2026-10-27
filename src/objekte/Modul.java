@@ -1,8 +1,7 @@
 package objekte;
 
-public class Modul {
+public class Modul extends BBQObjekt {
 
-	private int id;
 	private String bezeichnung;
 	private Spezialisierung spezialisierung;
 
@@ -11,18 +10,10 @@ public class Modul {
 	}
 
 	public Modul(int id, String bezeichnung) {
-		super();
-		this.id = id;
+		super(id);
 		this.bezeichnung = bezeichnung;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getBezeichnung() {
 		return bezeichnung;
@@ -42,7 +33,7 @@ public class Modul {
 
 	@Override
 	public String toString() {
-		return Fach.EOF + bezeichnung + " id " + id + Fach.EOF;
+		return Fach.EOF + bezeichnung + " id " + getId() + Fach.EOF;
 	}
 
 }

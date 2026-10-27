@@ -15,7 +15,7 @@ public class TestObjekte {
 		fach1.setId(1);
 		;
 		fach1.setBezeichnung("IT");
-		IO.println(fach1);
+		System.out.println(fach1);
 
 // Fach 1 Spezial. 1		
 		Spezialisierung spezi1 = new Spezialisierung();
@@ -27,20 +27,20 @@ public class TestObjekte {
 		String msg = fach1.addSpezialisierung(spezi1);
 
 		if (msg != null)
-			IO.print(msg);
+			System.out.print(msg);
 
-		IO.println(spezi1);
+		System.out.println(spezi1);
 
 // Fach 1 Spezial. 2	
 		Spezialisierung spezi2 = new Spezialisierung(2, "SI");
-		IO.println(spezi2);
+		System.out.println(spezi2);
 		
 		Gruppe gruppe = new Gruppe(12, "U30");
 		
 		Azubi az = new Azubi(1, "Schmidt", "Max");
 		
-		IO.print(az);
-		IO.println(gruppe);
+		System.out.print(az);
+		System.out.println(gruppe);
 
 	}
 
