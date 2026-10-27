@@ -1,59 +1,72 @@
 package objekte;
 
+/**
+ * Repräsentiert einen Auszubildenden im BBQ-Projekt.
+ * Erbt die ID sowie deren Getter und Setter von BBQObjekt.
+ */
 public class Azubi extends BBQObjekt {
 
-	private String name;
-	String vorname;
-	private Spezialisierung spezialisierung;
-	private Gruppe gruppe;
+    private String name; // Nachname des Azubis.
+    String vorname; // Vorname des Azubis (wie in der Vorlage paketweit sichtbar).
+    private Spezialisierung spezialisierung; // Fachliche Zuordnung des Azubis.
+    private Gruppe gruppe; // Gruppe, zu der der Azubi gehört.
 
-	public Azubi() {
-		super();
-	}
+    /** Standardkonstruktor: Die Felder können später gesetzt werden. */
+    public Azubi() {
+        super(); // Ruft den parameterlosen Konstruktor von BBQObjekt auf.
+    }
 
-	public Azubi(int id, String name, String vorname) {
+    /** Erstellt einen Azubi mit ID, Nachnamen und Vornamen. */
+    public Azubi(int id, String name, String vorname) {
+        super(id); // Die Mutterklasse speichert die ID.
+        this.name = name;
+        this.vorname = vorname;
+    }
 
-		super(id);
-		this.name = name;
-		this.vorname = vorname;
-	}
+    /** Gibt den Nachnamen zurück. */
+    public String getName() {
+        return name;
+    }
 
+    /** Setzt den Nachnamen. */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getName() {
-		return name;
-	}
+    /** Gibt den Vornamen zurück. */
+    public String getVorname() {
+        return vorname;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    /** Setzt den Vornamen. */
+    public void setVorname(String vorname) {
+        this.vorname = vorname;
+    }
 
-	public String getVorname() {
-		return vorname;
-	}
+    /** Gibt die zugeordnete Spezialisierung zurück (ggf. null). */
+    public Spezialisierung getSpezialisierung() {
+        return spezialisierung;
+    }
 
-	public void setVorname(String vorname) {
-		this.vorname = vorname;
-	}
+    /** Verknüpft den Azubi mit einer Spezialisierung. */
+    public void setSpezialisierung(Spezialisierung spezialisierung) {
+        this.spezialisierung = spezialisierung;
+    }
 
-	public Spezialisierung getSpezialisierung() {
-		return spezialisierung;
-	}
+    /** Gibt die zugeordnete Gruppe zurück (ggf. null). */
+    public Gruppe getGruppe() {
+        return gruppe;
+    }
 
-	public void setSpezialisierung(Spezialisierung spezialisierung) {
-		this.spezialisierung = spezialisierung;
-	}
+    /** Verknüpft den Azubi mit einer Gruppe. */
+    public void setGruppe(Gruppe gruppe) {
+        this.gruppe = gruppe;
+    }
 
-	public Gruppe getGruppe() {
-		return gruppe;
-	}
-
-	public void setGruppe(Gruppe gruppe) {
-		this.gruppe = gruppe;
-	}
-
-	@Override
-	public String toString() {
-		return name + " " + vorname + " id " + getId() + "\n";
-	}
-
+    /** Gibt den Azubi mit Nachname, Vorname und ID als Text aus. */
+    @Override
+    public String toString() {
+        // getId() ist von der Mutterklasse BBQObjekt geerbt.
+        return name + " " + vorname + " id " + getId() + "\n";
+    }
 }

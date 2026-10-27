@@ -1,21 +1,30 @@
 package objekte;
 
+/**
+ * Gemeinsame Mutterklasse für alle Objekte im BBQ-Projekt.
+ * Sie verwaltet die ID, die jede Unterklasse benötigt.
+ */
 public class BBQObjekt {
 
-	protected int id;
+    // protected: Auch Unterklassen dürfen auf die ID zugreifen.
+    protected int id;
 
-	public BBQObjekt() {
-	}
+    /** Erstellt ein Objekt, dessen ID zunächst den Standardwert 0 hat. */
+    public BBQObjekt() {
+    }
 
-	public BBQObjekt(int id) {
-		this.id = id;
-	}
+    /** Erstellt ein Objekt mit einer vorgegebenen ID. */
+    public BBQObjekt(int id) {
+        this.id = id; // Speichert die übergebene ID im aktuellen Objekt.
+    }
 
-	public int getId() {
-		return id;
-	}
+    /** Gibt die ID zurück. */
+    public int getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    /** Ändert die ID. */
+    public void setId(int id) {
+        this.id = id;
+    }
 }
