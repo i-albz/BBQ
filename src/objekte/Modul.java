@@ -10,7 +10,7 @@ public class Modul extends BBQObjekt {
 	}
 
 	public Modul(int id, String bezeichnung) {
-		super(id);
+		super();
 		this.bezeichnung = bezeichnung;
 	}
 
