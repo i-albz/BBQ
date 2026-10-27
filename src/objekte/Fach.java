@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Entspricht der DB-Entität Fach
  */
 public class Fach extends BBQObjekt {
-	
+
 	public static final String EOF = "\n";
 
 	private String bezeichnung;
@@ -59,7 +59,6 @@ public class Fach extends BBQObjekt {
 		spezialisierungen.add(sp);
 		return null;
 	}
-
 
 	public String getBezeichnung() {
 		return bezeichnung;
