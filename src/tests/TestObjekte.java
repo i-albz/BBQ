@@ -37,8 +37,8 @@ public class TestObjekte {
 		
 		Azubi az = new Azubi(1, "Schmidt", "Max");
 		
-		System.out.print(az);
-		System.out.println(gruppe);
+		IO.print(az);
+		IO.println(gruppe);
 
 	}
 
